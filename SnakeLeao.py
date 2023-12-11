@@ -9,7 +9,7 @@ class SNAKE:
         self.direction = Vector2(1,0)
         self.new_block = False
         
-        path_graphic = r"C:\FernandoLeao\Programacao\Projetos\snake-game\dist\data"
+        path_graphic = os.path.join(diretorio_atual, 'dist', 'data')
         
         # Head
         self.head_up = pygame.image.load(path_graphic + "/head_up.png").convert_alpha()
@@ -234,10 +234,11 @@ diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
 # Caminho absoluto para a imagem
 # Pegando as imagens
-path_apple = r"C:\FernandoLeao\Programacao\Projetos\snake-game\dist\data\apple.png"
+path_apple = os.path.join(diretorio_atual, 'dist', 'data', 'apple.png')
 apple = pygame.image.load(path_apple).convert_alpha()
+
 # Font para o score
-path_font = r"C:\FernandoLeao\Programacao\Projetos\snake-game\dist\data\Font\PoetsenOne-Regular.ttf"
+path_font = os.path.join(diretorio_atual, 'dist', 'data', 'Font', 'PoetsenOne-Regular.ttf')
 game_font = pygame.font.Font(path_font, 25)
 
 
